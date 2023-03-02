@@ -1,7 +1,7 @@
 import React from "react";
-import CardList from "./CardList";
-import SearchBox from "./SearchBox";
-import Scroll from './Scroll';
+import CardList from "../components/CardList.js";
+import SearchBox from "../components/SearchBox.js";
+import Scroll from '../components/Scroll';
 //This file has a state which makes this a smart component. Usually has class.
 //Props are always just static inputs. Things that come out of state.
 //Memory is needed for this app. State is the answer which means the description of my app a.k.a an Object. Tells the props what it is.
@@ -29,8 +29,8 @@ class App extends React.Component{
     }
 
     render(){
-        const filteredRobots = this.state.robots.filter(robots =>{
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const filteredRobots = this.state.robots.filter(robot =>{
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
     if(this.state.robots.length ===0 ){
         return <h1>Loading</h1>
