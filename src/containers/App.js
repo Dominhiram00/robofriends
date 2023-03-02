@@ -40,7 +40,7 @@ class App extends React.Component{
         <h1>RobotFriends</h1>
         <SearchBox searchChange = {this.onSearchChange}/>
         <Scroll>
-            <CardList robots = {filteredRobots} />
+                <CardList robots = {filteredRobots} />
         </Scroll>
     </div>
     );
